@@ -24,16 +24,16 @@ namespace Prototipo_Suport
         private void AbrirTelaChamadocs() // ou em um botão, por exemplo
         {
             TelaDeChamadocs chamadocs = new TelaDeChamadocs();
-
-            // Esconde a tela principal
             this.Hide();
-
-            // Quando a tela de chamados for fechada, reexibe a principal
             chamadocs.FormClosed += (s, args) => this.Show();
-
-            // Exibe a tela de chamados
             chamadocs.Show();
         }
 
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            telaPrincipal paginaPrincipal = new telaPrincipal();
+            paginaPrincipal.Show();
+            this.Close(); // ou this.Hide(); se quiser manter esta tela na memória
+        }
     }
 }

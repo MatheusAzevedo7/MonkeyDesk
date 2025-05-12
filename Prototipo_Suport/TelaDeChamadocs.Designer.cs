@@ -94,7 +94,7 @@
             this.groupBox1.Size = new System.Drawing.Size(202, 95);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nivel De Status";
+            this.groupBox1.Text = "Nivel De Suporte";
             // 
             // rbnUrgente
             // 
@@ -246,6 +246,7 @@
             this.btnVoltar.TabIndex = 13;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // label7
             // 
