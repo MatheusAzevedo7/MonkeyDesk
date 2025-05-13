@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDescrição = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbNivelSuporte = new System.Windows.Forms.GroupBox();
             this.rbnUrgente = new System.Windows.Forms.RadioButton();
             this.rbnAlto = new System.Windows.Forms.RadioButton();
             this.rbnMedio = new System.Windows.Forms.RadioButton();
@@ -48,7 +48,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.mtbHora = new System.Windows.Forms.MaskedTextBox();
-            this.groupBox1.SuspendLayout();
+            this.gbNivelSuporte.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -62,14 +62,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome Cliente :";
             // 
-            // txtDescrição
+            // txtDescricao
             // 
-            this.txtDescrição.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescrição.Location = new System.Drawing.Point(30, 159);
-            this.txtDescrição.Multiline = true;
-            this.txtDescrição.Name = "txtDescrição";
-            this.txtDescrição.Size = new System.Drawing.Size(504, 177);
-            this.txtDescrição.TabIndex = 1;
+            this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(30, 159);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(504, 177);
+            this.txtDescricao.TabIndex = 1;
             // 
             // btnSalvar
             // 
@@ -80,21 +80,22 @@
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // groupBox1
+            // gbNivelSuporte
             // 
-            this.groupBox1.Controls.Add(this.rbnUrgente);
-            this.groupBox1.Controls.Add(this.rbnAlto);
-            this.groupBox1.Controls.Add(this.rbnMedio);
-            this.groupBox1.Controls.Add(this.rbnBaixo);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(559, 159);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(202, 95);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nivel De Suporte";
+            this.gbNivelSuporte.Controls.Add(this.rbnUrgente);
+            this.gbNivelSuporte.Controls.Add(this.rbnAlto);
+            this.gbNivelSuporte.Controls.Add(this.rbnMedio);
+            this.gbNivelSuporte.Controls.Add(this.rbnBaixo);
+            this.gbNivelSuporte.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbNivelSuporte.ForeColor = System.Drawing.Color.White;
+            this.gbNivelSuporte.Location = new System.Drawing.Point(559, 159);
+            this.gbNivelSuporte.Name = "gbNivelSuporte";
+            this.gbNivelSuporte.Size = new System.Drawing.Size(202, 95);
+            this.gbNivelSuporte.TabIndex = 3;
+            this.gbNivelSuporte.TabStop = false;
+            this.gbNivelSuporte.Text = "Nivel De Suporte";
             // 
             // rbnUrgente
             // 
@@ -169,6 +170,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(385, 56);
             this.txtID.Name = "txtID";
@@ -188,6 +190,7 @@
             // 
             // mtbData
             // 
+            this.mtbData.Enabled = false;
             this.mtbData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbData.Location = new System.Drawing.Point(630, 59);
             this.mtbData.Mask = "00/00/0000";
@@ -261,6 +264,7 @@
             // 
             // mtbHora
             // 
+            this.mtbHora.Enabled = false;
             this.mtbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbHora.Location = new System.Drawing.Point(630, 100);
             this.mtbHora.Mask = "00:00";
@@ -287,16 +291,16 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNomeCliente);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbNivelSuporte);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtDescrição);
+            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label1);
             this.Name = "TelaDeChamadocs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaDeChamadocs";
             this.Load += new System.EventHandler(this.TelaDeChamadocs_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbNivelSuporte.ResumeLayout(false);
+            this.gbNivelSuporte.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,9 +309,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDescrição;
+        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbNivelSuporte;
         private System.Windows.Forms.RadioButton rbnAlto;
         private System.Windows.Forms.RadioButton rbnMedio;
         private System.Windows.Forms.RadioButton rbnBaixo;
